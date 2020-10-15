@@ -1,6 +1,7 @@
 # go-convmap
 
 [![Build Status](https://github.com/suzuki-shunsuke/go-convmap/workflows/CI/badge.svg)](https://github.com/suzuki-shunsuke/go-convmap/actions)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/suzuki-shunsuke/go-convmap)](https://pkg.go.dev/github.com/suzuki-shunsuke/go-convmap/convmap)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/b1b3bbcbc72ad25f6c44/test_coverage)](https://codeclimate.com/github/suzuki-shunsuke/go-convmap/test_coverage)
 [![Go Report Card](https://goreportcard.com/badge/github.com/suzuki-shunsuke/go-convmap)](https://goreportcard.com/report/github.com/suzuki-shunsuke/go-convmap)
 [![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/go-convmap.svg)](https://github.com/suzuki-shunsuke/go-convmap)
