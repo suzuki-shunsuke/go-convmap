@@ -8,6 +8,7 @@ import (
 )
 
 func TestConvert(t *testing.T) { //nolint:funlen
+	t.Parallel()
 	data := []struct {
 		title string
 		isErr bool
@@ -68,6 +69,7 @@ func TestConvert(t *testing.T) { //nolint:funlen
 	for _, d := range data {
 		d := d
 		t.Run(d.title, func(t *testing.T) {
+			t.Parallel()
 			a, err := convmap.Convert(d.input)
 			if d.isErr {
 				if err == nil {
