@@ -10,10 +10,11 @@ import (
 func TestConvert(t *testing.T) { //nolint:funlen
 	t.Parallel()
 	data := []struct {
-		title string
-		isErr bool
-		input interface{}
-		exp   interface{}
+		title         string
+		isErr         bool
+		input         interface{}
+		exp           interface{}
+		convertMapKey convmap.ConvertMapKey
 	}{
 		{
 			title: "int",
@@ -55,6 +56,7 @@ func TestConvert(t *testing.T) { //nolint:funlen
 					true: "bar",
 				},
 			},
+			convertMapKey: convmap.ConvertMapKeyStrict,
 		},
 		{
 			title: "failed to convert map's value",
@@ -64,13 +66,14 @@ func TestConvert(t *testing.T) { //nolint:funlen
 					true: "bar",
 				},
 			},
+			convertMapKey: convmap.ConvertMapKeyStrict,
 		},
 	}
 	for _, d := range data {
 		d := d
 		t.Run(d.title, func(t *testing.T) {
 			t.Parallel()
-			a, err := convmap.Convert(d.input)
+			a, err := convmap.Convert(d.input, d.convertMapKey)
 			if d.isErr {
 				if err == nil {
 					t.Error("convmap.Convert() should return an error")
