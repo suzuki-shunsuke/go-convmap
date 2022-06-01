@@ -2,34 +2,41 @@ package convmap
 
 import (
 	"fmt"
-	"strconv"
+	"reflect"
 )
 
 // Convert converts map[interface{}]interface{} to map[string]interface{} in data.
 // data isn't changed.
+//nolint:cyclop
 func Convert(data interface{}, convertMapKey ConvertMapKey) (interface{}, error) {
 	if convertMapKey == nil {
 		convertMapKey = ConvertMapKeySmart
 	}
-	switch t := data.(type) {
-	case map[interface{}]interface{}:
-		m := make(map[string]interface{}, len(t))
-		for k, v := range t {
-			s, err := convertMapKey(k)
+	val := reflect.ValueOf(data)
+	if val.Kind() == reflect.Ptr {
+		val = val.Elem()
+	}
+	//nolint:exhaustive
+	switch val.Kind() {
+	case reflect.Map:
+		m := make(map[string]interface{}, val.Len())
+		for _, k := range val.MapKeys() {
+			v := val.MapIndex(k)
+			s, err := convertMapKey(k.Interface())
 			if err != nil {
 				return nil, err
 			}
-			val, err := Convert(v, convertMapKey)
+			val, err := Convert(v.Interface(), convertMapKey)
 			if err != nil {
 				return nil, fmt.Errorf("key: %s: %w", s, err)
 			}
 			m[s] = val
 		}
 		return m, nil
-	case []interface{}:
-		arr := make([]interface{}, len(t))
-		for i, v := range t {
-			val, err := Convert(v, convertMapKey)
+	case reflect.Slice:
+		arr := make([]interface{}, val.Len())
+		for i := 0; i < val.Len(); i++ {
+			val, err := Convert(val.Index(i).Interface(), convertMapKey)
 			if err != nil {
 				return nil, fmt.Errorf("index: %d: %w", i, err)
 			}
@@ -45,20 +52,8 @@ func Convert(data interface{}, convertMapKey ConvertMapKey) (interface{}, error)
 type ConvertMapKey func(key interface{}) (string, error)
 
 // ConvertMapKeySmart converts interface{} to string.
-// If key is bool, int, or int64, it is converted to string with strconv package.
 func ConvertMapKeySmart(key interface{}) (string, error) {
-	switch k := key.(type) {
-	case string:
-		return k, nil
-	case bool:
-		return strconv.FormatBool(k), nil
-	case int:
-		return strconv.Itoa(k), nil
-	case int64:
-		return strconv.FormatInt(k, 10), nil //nolint:gomnd
-	default:
-		return "", fmt.Errorf("the map key should be string: %+v", key)
-	}
+	return fmt.Sprintf("%v", key), nil
 }
 
 // ConvertMapKeyStrict converts interface{} to string.
