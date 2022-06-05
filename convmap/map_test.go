@@ -68,6 +68,52 @@ func TestConvert(t *testing.T) { //nolint:funlen
 			},
 			convertMapKey: convmap.ConvertMapKeyStrict,
 		},
+		{
+			title: "interface is nested",
+			input: map[string]interface{}{
+				"foo": []interface{}{
+					map[interface{}]interface{}{
+						"key":      "sometype",
+						"operator": "In",
+						"values": []interface{}{
+							"large",
+							"medium",
+						},
+						"extra": map[interface{}]interface{}{
+							"comple": map[interface{}]interface{}{
+								"ca": "ted",
+							},
+						},
+					},
+				},
+			},
+			exp: map[string]interface{}{
+				"foo": []interface{}{
+					map[string]interface{}{
+						"key":      "sometype",
+						"operator": "In",
+						"values": []interface{}{
+							"large",
+							"medium",
+						},
+						"extra": map[string]interface{}{
+							"comple": map[string]interface{}{
+								"ca": "ted",
+							},
+						},
+					},
+				},
+			},
+		},
+		{
+			title: "special type map[uint16]interface{}",
+			input: map[uint16]interface{}{
+				1234: "bar",
+			},
+			exp: map[string]interface{}{
+				"1234": "bar",
+			},
+		},
 	}
 	for _, d := range data {
 		d := d
