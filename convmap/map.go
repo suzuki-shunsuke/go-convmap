@@ -7,6 +7,7 @@ import (
 
 // Convert converts map[interface{}]interface{} to map[string]interface{} in data.
 // data isn't changed.
+//
 //nolint:cyclop
 func Convert(data interface{}, convertMapKey ConvertMapKey) (interface{}, error) {
 	if convertMapKey == nil {

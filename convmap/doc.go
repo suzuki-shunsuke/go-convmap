@@ -1,7 +1,7 @@
 /*
 Package convmap converts `map[interface{}]interface{}` to `map[string]interface{}`.
 
-Background
+# Background
 
 https://github.com/go-yaml/yaml/issues/139
 
