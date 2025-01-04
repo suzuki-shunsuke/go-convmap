@@ -8,4 +8,4 @@ packages:
 - name: golangci/golangci-lint@v1.63.4
 - name: codeclimate/test-reporter@v0.11.1
 - name: reviewdog/reviewdog@v0.20.3
-- name: rhysd/actionlint@v1.7.5
+- name: rhysd/actionlint@v1.7.6
