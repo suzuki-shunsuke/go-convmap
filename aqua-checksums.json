@@ -1,33 +1,33 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-darwin-amd64.tar.gz",
-      "checksum": "07F81FF3C7A5078A36AC90E49C0DC8629625AA53EFBDB463517E5F5929113E76",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-darwin-amd64.tar.gz",
+      "checksum": "E091107C4CA7E283902343BA3A09D14FB56B86E071EFFD461CE9D67193EF580E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-darwin-arm64.tar.gz",
-      "checksum": "EE63F34045256370DB6880500FE4F2904BB004E1A2591B09FEB28642997D29D8",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-darwin-arm64.tar.gz",
+      "checksum": "90783FA092A0F64A4F7B7D419F3DA1F53207E300261773BABE962957240E9EA6",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-linux-amd64.tar.gz",
-      "checksum": "50EBC01988429E07D29A556417AAF1EF4DF441A7E88645617CF5DB3033C0E37B",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-linux-amd64.tar.gz",
+      "checksum": "E55E0EB515936C0FBD178BCE504798A9BD2F0B191E5E357768B18FD5415EE541",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-linux-arm64.tar.gz",
-      "checksum": "00CD307E8CB20001CF0655B5A723DD678EB2B578151AFAB798312CD4A5F5EAE1",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-linux-arm64.tar.gz",
+      "checksum": "582EB73880F4408D7FB89F12B502D577BD7B0B63D8C681DA92BB6B9D934D4363",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-windows-amd64.zip",
-      "checksum": "FE0F1B0D39FE13410D5001771747EE6218F68684032C92878E214392E6980147",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-windows-amd64.zip",
+      "checksum": "FD7298019C76CF414AB083491F87F6C0A3E537ED6D727D6FF9135E503D6F9C32",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/golangci/golangci-lint/v2.0.0/golangci-lint-2.0.0-windows-arm64.zip",
-      "checksum": "BC1F0275549555D04F4804539564A055F8D630938AFD890A38A2A7E4BCA26B00",
+      "id": "github_release/github.com/golangci/golangci-lint/v2.1.6/golangci-lint-2.1.6-windows-arm64.zip",
+      "checksum": "0DC38C44D8270A0ED3267BCD3FBDCD8384761D04D0FD2D53B63FC502F0F39722",
       "algorithm": "sha256"
     },
     {
@@ -91,23 +91,38 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/codeclimate.com/downloads/test-reporter/test-reporter-0.11.1-darwin-amd64",
-      "checksum": "B8EF5A44BDDC25EF8A0A80BEB8DE9C050CBCC464078A6EA1E50CF0DFA40EEC46",
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_darwin_amd64.tar.gz",
+      "checksum": "26B0E7F47F848EE17F7829D80CB75A8B6A77D87EADB3423A57B5FF5916DBEF24",
       "algorithm": "sha256"
     },
     {
-      "id": "http/codeclimate.com/downloads/test-reporter/test-reporter-0.11.1-linux-amd64",
-      "checksum": "9DEEFD996DF0F6D1C9FB79405B396EB91A7ACA35ACCB8969755FCAA668DA4DAD",
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_darwin_arm64.tar.gz",
+      "checksum": "F5D463AEE96EA2485903218A12143478A517C084F94A3F5CA47F1D90440B4ADB",
       "algorithm": "sha256"
     },
     {
-      "id": "http/codeclimate.com/downloads/test-reporter/test-reporter-0.11.1-linux-arm64",
-      "checksum": "6FAAD38A2299895C6847F6906B196A1BA16DB7BB2AC8029780EF441BAFEC29C9",
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_linux_amd64.tar.gz",
+      "checksum": "5FD6696E6F736750B60A67F0C7F7E43642BDA15348D55D261C4D386940A1C02F",
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.332.0/registry.yaml",
-      "checksum": "2590C0DDCBD5A4A177FBAEDC3F22C6FB6B52A6FF7A11EB82EE91A6EA6D1EFC98",
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_linux_arm64.tar.gz",
+      "checksum": "40F870601461EF2FC4F5F3DF25EB79EC49506ABF1C45A0E4D02BBED0E1A88A5E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_windows_amd64.zip",
+      "checksum": "3E6E644581EA3B947F7D1FAA6D2A4BBAC2AC19249F6E8AB29A808FD4BA4ADD47",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/suzuki-shunsuke/ghalint/v1.5.3/ghalint_1.5.3_windows_arm64.zip",
+      "checksum": "50A45BA46F9E2C51509F83B04C7F1869BD23CA39B2EFD3CA7106E6D0076EF199",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.387.0/registry.yaml",
+      "checksum": "AE50B021A9872B320C4E7897FA468E545AF9F692E61000F7EB0495E029612848",
       "algorithm": "sha256"
     }
   ]
