@@ -9,4 +9,4 @@ packages:
 - name: reviewdog/reviewdog@v0.21.0
 - name: rhysd/actionlint@v1.7.10
 - name: suzuki-shunsuke/ghalint@v1.5.5
-- name: crate-ci/typos@v1.43.0
+- name: crate-ci/typos@v1.43.1
